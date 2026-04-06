@@ -118,24 +118,26 @@ body {
   position: relative;
   height: 25%;
   width: 25%;
+  border-radius: 50%;
 }
 
 .half {
   position: absolute;
   height: 100%;
-  width: 50%;
+  width: 100%;
   background-color: darkred;
+  border-radius: 50%;
 }
 
 .half--left {
   left: 0;
-  border-radius: 50% 0 0 50%;
+  clip-path: inset(0 50% 0 0);
   animation: split-left 2s ease-in-out infinite;
 }
 
 .half--right {
-  right: 0;
-  border-radius: 0 50% 50% 0;
+  left: 0;
+  clip-path: inset(0 0 0 50%);
   animation: split-right 2s ease-in-out infinite;
 }
 
