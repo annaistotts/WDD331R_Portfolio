@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 9 Sliding Menu</title>
+    <link rel="stylesheet" href="W09.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="page__header">
+        <div class="menu-toggle" id="menu-toggle" onclick="toggleNav()" aria-label="Toggle menu" role="button" tabindex="0">
+          <span class="menu-toggle__bar"></span>
+        </div>
+
+        <h1 class="page__title">Sliding Menu Demo</h1>
+      </header>
+
+      <main class="page__content">
+        <p>
+          Animated Slideout Menu
+        </p>
+        <p>
+          All the stuff.
+        </p>
+      </main>
+
+      <aside class="sidebar" id="sidebar">
+        <nav class="sidebar__nav" aria-label="Main navigation">
+          <a href="#" class="sidebar__link">One</a>
+          <a href="#" class="sidebar__link">Two</a>
+          <a href="#" class="sidebar__link">Three</a>
+          <a href="#" class="sidebar__link">Four</a>
+        </nav>
+      </aside>
+
+      <div class="page__overlay" id="page-overlay" onclick="toggleNav()"></div>
+    </div>
+
+    <script src="W09.js"></script>
+  </body>
+</html>

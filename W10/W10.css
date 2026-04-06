@@ -1,0 +1,47 @@
+body {
+      /* Remove default page spacing */
+      margin: 0;
+      /* Make body at least the full screen height */
+      min-height: 100vh;
+      /* Use flexbox so we can center content easily */
+      display: flex;
+      /* Vertical centering */
+      align-items: center;
+      /* Horizontal centering */
+      justify-content: center;
+    }
+
+    #curvedarrow {
+      /* Parent for absolutely-positioned :after tail */
+      position: relative;
+      /* Zero-sized box: borders create the triangle shape */
+      width: 0;
+      height: 0;
+      /* Invisible top border side of the triangle */
+      border-top: 24px solid transparent;
+      /* Visible red side of the triangle (arrow tip) */
+      border-right: 24px solid red;
+      /* Slight tilt to the whole arrow */
+      transform: rotate(10deg);
+    }
+
+    #curvedarrow:after {
+      /* Creates the pseudo-element so it can be displayed */
+      content: "";
+      /* Position relative to #curvedarrow */
+      position: absolute;
+      /* Reset base border values */
+      border: 0 solid transparent;
+      /* Draw the curved red stroke */
+      border-top: 8px solid red;
+      /* Round one corner to form the curve */
+      border-radius: 54px 0 0 0;
+      /* Move the curve into place near the tip */
+      top: -32px;
+      left: -24px;
+      /* Size of the curved tail area */
+      width: 32px;
+      height: 32px;
+      /* Rotate curve to connect with arrow tip */
+      transform: rotate(45deg);
+    }

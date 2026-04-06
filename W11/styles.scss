@@ -1,0 +1,46 @@
+@use "quote-box";
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: clamp(
+    var(--fluid-type-min, 1rem),
+    calc(1rem + var(--fluid-type-target, 3vw)),
+    var(--fluid-type-max, 1.3rem)
+  );
+}
+
+
+.quotes-page {
+  padding: 2rem;
+
+  &__section {
+    margin-bottom: 3rem;
+  }
+}
+
+
+.dark-section {
+  --brightness: 500%;
+  background-color: #333;
+  color: white;
+  padding: 2rem;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File Management Commands</title>
+
+  <!-- Recursive variable font -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=swap"
+  />
+
+  <link rel="stylesheet" href="W12.css" />
+</head>
+<body>
+  <main class="page">
+    <article class="book-section flow">
+
+      <p>
+        For example, say your developers have come up with the perfect amortization
+        program and you want to install it on the workgroup server for other systems
+        to remotely mount and use. Because this is a third-party or custom
+        application, the logical place for it is in
+        <code>/usr/local/appname</code>, possibly with a link to the program binary
+        in the <code>/usr/local/bin</code> directory (because that's in the path).
+      </p>
+
+      <aside class="callout callout--alert">
+        <div class="callout__badge" aria-hidden="true">
+          <span class="callout__badge-text">Alert</span>
+        </div>
+
+        <div class="callout__content">
+          <h2 class="visually-hidden">Alert</h2>
+          <p>
+            If given a choice between putting the software package
+            <strong>bigprog</strong> in the <code>/usr/local/bigprog</code> section
+            and the <code>/opt/bigprog</code> section, it's hard to choose. Read any
+            relevant exam question closely—the main difference being that the
+            <code>/opt</code> section is not considered to be sharable, whereas the
+            <code>/usr</code> section is often shared and mounted by client systems.
+          </p>
+        </div>
+      </aside>
+
+      <section class="flow" aria-labelledby="file-management-heading">
+        <h1 id="file-management-heading">File Management Commands</h1>
+
+        <p class="lede">
+          A major section of the 101 exam is dedicated to how to run commands
+          properly with the right options and arguments. As a good sysadmin, you'll
+          be expected to know how to create, delete, edit, set permissions on,
+          display, move, copy, and determine the type of files and programs.
+        </p>
+      </section>
+
+      <aside class="callout callout--alert">
+        <div class="callout__badge" aria-hidden="true">
+          <span class="callout__badge-text">Alert</span>
+        </div>
+
+        <div class="callout__content">
+          <h2 class="visually-hidden">Alert</h2>
+          <p>
+            You must be able to pick proper and working commands out of lists of
+            possibilities, type in appropriate strings in fill-in-the-blank boxes,
+            and in general show that you've run the programs and utilities in
+            question.
+          </p>
+        </div>
+      </aside>
+
+      <section class="flow" aria-labelledby="tips-heading">
+        <h2 id="tips-heading">Tips for Working with Linux Files</h2>
+
+        <p>
+          Because most users and sysadmins come from a Windows or other OS
+          background, a quick set of recommendations for the less-experienced can be
+          of help here:
+        </p>
+
+        <ul class="tip-list flow" role="list">
+          <li class="tip-list__item">
+            <p>
+              <strong>Hidden files aren't really hidden</strong>
+              <span class="dash">—</span>
+              They just begin with a <code>.</code>, such as the
+              <code>.bashrc</code> and <code>.bash_profile</code> files. These are
+              not viewable by normal users with conventional commands and switches
+              and aren't deleted by commands such as <code>rm -f *.*</code>.
+            </p>
+          </li>
+
+          <li class="tip-list__item">
+            <p>
+              <strong>Filenames can contain multiple periods or no period characters</strong>
+              <span class="dash">—</span>
+              The filenames <code>this.is.a.long.file</code> and
+              <code>thisisalongfile</code> are perfectly reasonable and possible.
+            </p>
+          </li>
+
+          <li class="tip-list__item">
+            <p>
+              <strong>Spaces in filenames look nice, but are a pain to type</strong>
+              <span class="dash">—</span>
+              Use an <code>_</code> or a <code>-</code> instead of spaces because
+              it's neater and easier than prefixing all spaces with a
+              <code>\</code>. <span class="paren-note">(To display a space in a
+              filename, the system shows a space prefixed with a backslash.)</span>
+            </p>
+          </li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+</body>
+</html>
